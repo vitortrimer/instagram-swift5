@@ -42,6 +42,8 @@ class MainTabController: UITabBarController {
                 nav.modalPresentationStyle = .fullScreen
                 self.present(nav, animated: true, completion: nil)
             }
+        } else {
+            fetchUser()
         }
     }
     

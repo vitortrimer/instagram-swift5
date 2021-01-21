@@ -38,6 +38,7 @@ class ProfileController: UICollectionViewController {
     //MARK: - Helpers
     
     func configureCollectionView() {
+        navigationItem.title = user.username
         collectionView.backgroundColor = .systemBackground
         collectionView.register(ProfileCell.self, forCellWithReuseIdentifier: cellIdentifier)
         collectionView.register(ProfileHeader.self,
