@@ -24,17 +24,21 @@ class LoginController: UIViewController {
         return iv
     }()
     
-    private let emailTextField: UITextField = {
+    private lazy var emailTextField: UITextField = {
         let tf = CustomTextField(placeholder: "Email")
         tf.returnKeyType = .next
         tf.keyboardType = .emailAddress
-        
+        tf.textContentType = .emailAddress
+        tf.delegate = self
         return tf
     }()
     
-    private let passwordTextField: UITextField = {
+    private lazy var passwordTextField: UITextField = {
         let tf = CustomTextField(placeholder: "Password")
+        tf.returnKeyType = .send
         tf.isSecureTextEntry = true
+        tf.delegate = self
+        tf.textContentType = .password
         return tf
     }()
     
@@ -152,4 +156,20 @@ extension LoginController: FormViewModel {
         loginButton.isEnabled = viewModel.formIsValid
     }
     
+}
+
+extension LoginController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case emailTextField:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            handlelogin()
+        default:
+            textField.resignFirstResponder()
+        }
+        
+        return true
+    }
 }

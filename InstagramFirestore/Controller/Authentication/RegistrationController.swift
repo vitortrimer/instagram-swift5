@@ -23,25 +23,37 @@ class RegistrationController: UIViewController {
         return button
     }()
     
-    private let emailTextField: UITextField = {
+    private lazy var emailTextField: UITextField = {
         let tf = CustomTextField(placeholder: "Email")
         tf.keyboardType = .emailAddress
+        tf.returnKeyType = .next
+        tf.delegate = self
         return tf
     }()
     
-    private let passwordTextField: UITextField = {
+    private lazy var passwordTextField: UITextField = {
         let tf = CustomTextField(placeholder: "Password")
         tf.isSecureTextEntry = true
+        tf.returnKeyType = .next
+        tf.delegate = self
         return tf
     }()
     
-    private let fullNameTextField: UITextField = {
+    private lazy var fullNameTextField: UITextField = {
         let tf = CustomTextField(placeholder: "Full name")
         tf.autocapitalizationType = .words
+        tf.returnKeyType = .next
+        tf.delegate = self
         return tf
     }()
     
-    private let usernameTextField: UITextField = CustomTextField(placeholder: "Username")
+    private lazy var usernameTextField: UITextField = {
+        let tf = CustomTextField(placeholder: "Username")
+        tf.returnKeyType = .send
+        tf.delegate = self
+        
+        return  tf
+    }()
     
     private let registerButton: UIButton = {
         let button = UIButton(type: .system)
@@ -184,6 +196,27 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
         
         self.dismiss(animated: true, completion: nil)
         
+    }
+    
+
+}
+
+extension RegistrationController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case emailTextField:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            fullNameTextField.becomeFirstResponder()
+        case fullNameTextField:
+            usernameTextField.becomeFirstResponder()
+        case usernameTextField:
+            handleSignUp()
+        default:
+            textField.resignFirstResponder()
+        }
+        
+        return true
     }
 }
 
