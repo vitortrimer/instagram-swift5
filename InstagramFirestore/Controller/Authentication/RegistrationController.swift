@@ -35,7 +35,12 @@ class RegistrationController: UIViewController {
         return tf
     }()
     
-    private let fullNameTextField: UITextField = CustomTextField(placeholder: "Full name")
+    private let fullNameTextField: UITextField = {
+        let tf = CustomTextField(placeholder: "Full name")
+        tf.autocapitalizationType = .words
+        return tf
+    }()
+    
     private let usernameTextField: UITextField = CustomTextField(placeholder: "Username")
     
     private let registerButton: UIButton = {
