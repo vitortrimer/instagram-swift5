@@ -21,7 +21,9 @@ class LoginController: UIViewController {
     
     private let emailTextField: UITextField = {
         let tf = CustomTextField(placeholder: "Email")
+        tf.returnKeyType = .next
         tf.keyboardType = .emailAddress
+        
         return tf
     }()
     
