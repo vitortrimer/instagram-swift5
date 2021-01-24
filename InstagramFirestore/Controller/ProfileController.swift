@@ -127,13 +127,17 @@ extension ProfileController: ProfileHeaderDelegate {
         if user.isCurrentUser {
             print("Edit profile")
         } else if user.isFollowed {
+            showLoader(true)
             UserService.unFollow(uid: user.uid) { error in
+                self.showLoader(false)
                 self.user.isFollowed = false
                 self.user.stats.followers -= 1
                 self.collectionView.reloadData()
             }
         } else {
+            showLoader(true)
             UserService.follow(uid: user.uid) { error in
+                self.showLoader(false)
                 self.user.isFollowed = true
                 self.user.stats.followers += 1
                 self.collectionView.reloadData()
