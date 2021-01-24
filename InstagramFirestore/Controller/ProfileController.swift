@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 private let cellIdentifier = "ProfileCell"
 private let headerIdentifier = "ProfileHeader"
@@ -30,10 +31,27 @@ class ProfileController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
+        checkFollow()
+        fetchUserStats()
     }
     
     //MARK: - Services
     
+    func checkFollow() {
+        if user.uid != Auth.auth().currentUser!.uid {
+            UserService.checkFollow(uid: user.uid) { isFollowed in
+                self.user.isFollowed = isFollowed
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    func fetchUserStats() {
+        UserService.fetchUserStats(uid: user.uid) { stats in
+            self.user.stats = stats
+            self.collectionView.reloadData()
+        }
+    }
     
     //MARK: - Helpers
     
@@ -65,6 +83,7 @@ extension ProfileController {
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerIdentifier, for: indexPath) as! ProfileHeader
         
+        header.delegate = self
         header.viewModel = ProfileHeaderViewModel(user: user)
         
         
@@ -98,5 +117,29 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width, height: 240)
     }
+    
+}
+
+// MARK: - ProfileHeaderDelegate
+extension ProfileController: ProfileHeaderDelegate {
+    func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User) {
+        
+        if user.isCurrentUser {
+            print("Edit profile")
+        } else if user.isFollowed {
+            UserService.unFollow(uid: user.uid) { error in
+                self.user.isFollowed = false
+                self.user.stats.followers -= 1
+                self.collectionView.reloadData()
+            }
+        } else {
+            UserService.follow(uid: user.uid) { error in
+                self.user.isFollowed = true
+                self.user.stats.followers += 1
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
     
 }
