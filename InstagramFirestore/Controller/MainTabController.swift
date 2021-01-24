@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import YPImagePicker
 
 class MainTabController: UITabBarController {
     
@@ -60,6 +61,7 @@ class MainTabController: UITabBarController {
     
     func configureViewControllers(withUser user: User) {
         view.backgroundColor = .white
+        self.delegate = self
         
         let layout = UICollectionViewFlowLayout()
         let feed = templateNavigationComtroller(unselectedImage: #imageLiteral(resourceName: "home_unselected"), selectedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: FeedController(collectionViewLayout: layout))
@@ -94,6 +96,31 @@ extension MainTabController: AuthenticationDelegate {
     func authenticationDidComplete() {
         fetchUser()
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: - UITabBarControllerDelegate
+
+extension MainTabController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        let index = viewControllers?.firstIndex(of: viewController)
+        
+        if index == 2 {
+            var config = YPImagePickerConfiguration()
+            config.library.mediaType = .photo
+            config.shouldSaveNewPicturesToAlbum = false
+            config.startOnScreen = .library
+            config.screens = [.library]
+            config.hidesStatusBar = false
+            config.hidesBottomBar = false
+            config.library.maxNumberOfItems = 1
+            
+            let picker = YPImagePicker(configuration: config)
+            picker.modalPresentationStyle = .fullScreen
+            present(picker, animated: true, completion: nil)
+        }
+        
+        return true
     }
 }
 
