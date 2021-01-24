@@ -121,6 +121,7 @@ class RegistrationController: UIViewController {
     }
     
     @objc func handleSignUp() {
+        showLoader(true)
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         guard let fullname = fullNameTextField.text else { return }
@@ -130,6 +131,7 @@ class RegistrationController: UIViewController {
         let credentials = AuthCredentials(email: email, password: password, fullname: fullname, username: username, profileImage: profileImage)
         
         AuthService.registerUser(withCredentials: credentials) { error in
+            self.showLoader(false)
             if let error = error {
                 print("DEBUG: Failed to register user \(error.localizedDescription)")
                 return

@@ -34,6 +34,9 @@
 		A472D87125B8BDC100E1DC39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A472D87025B8BDC100E1DC39 /* GoogleService-Info.plist */; };
 		A474CDE525B9005D004475A5 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A474CDE425B9005D004475A5 /* ImageUploader.swift */; };
 		A474CDE825B90070004475A5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A474CDE725B90070004475A5 /* AuthService.swift */; };
+		A4878D6B25BDF4ED0076DF41 /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4878D6A25BDF4ED0076DF41 /* UploadPostController.swift */; };
+		A4878D6E25BDFA100076DF41 /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4878D6D25BDFA100076DF41 /* InputTextView.swift */; };
+		A4878D7125BE33650076DF41 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4878D7025BE33650076DF41 /* PostService.swift */; };
 		A49B424F25BAF8CA00A7BA95 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49B424E25BAF8CA00A7BA95 /* UserCellViewModel.swift */; };
 		A4EB76D925BA480B0042B431 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB76D825BA480B0042B431 /* UserCell.swift */; };
 		E642A2F797476F9E9386012B /* Pods_InstagramFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA0EE2FF3C8BE04B6642A96 /* Pods_InstagramFirestore.framework */; };
@@ -71,6 +74,9 @@
 		A472D87025B8BDC100E1DC39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A474CDE425B9005D004475A5 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		A474CDE725B90070004475A5 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		A4878D6A25BDF4ED0076DF41 /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
+		A4878D6D25BDFA100076DF41 /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
+		A4878D7025BE33650076DF41 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		A49B424E25BAF8CA00A7BA95 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		A4EB76D825BA480B0042B431 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		F686390CA9C3556D8BB98118 /* Pods-InstagramFirestore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirestore.release.xcconfig"; path = "Target Support Files/Pods-InstagramFirestore/Pods-InstagramFirestore.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +176,7 @@
 				A474CDE425B9005D004475A5 /* ImageUploader.swift */,
 				A474CDE725B90070004475A5 /* AuthService.swift */,
 				A4654EAB25B9B1180044FA39 /* UserService.swift */,
+				A4878D7025BE33650076DF41 /* PostService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -184,6 +191,7 @@
 				A433269725B6FE600088092D /* ImageSelectorController.swift */,
 				A433269E25B6FE770088092D /* NotificationsController.swift */,
 				A43326A125B6FE850088092D /* ProfileController.swift */,
+				A4878D6A25BDF4ED0076DF41 /* UploadPostController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +201,7 @@
 			children = (
 				A43326AB25B728490088092D /* Extensions.swift */,
 				A4654EAE25B9B1500044FA39 /* Constants.swift */,
+				A4878D6D25BDFA100076DF41 /* InputTextView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -341,6 +350,7 @@
 			files = (
 				A472D86B25B874DC00E1DC39 /* CustomTextField.swift in Sources */,
 				A4654EA725B99B3F0044FA39 /* ProfileHeader.swift in Sources */,
+				A4878D6B25BDF4ED0076DF41 /* UploadPostController.swift in Sources */,
 				A433267725B6FB5A0088092D /* ViewController.swift in Sources */,
 				A472D86525B84FA200E1DC39 /* LoginController.swift in Sources */,
 				A43326A925B727710088092D /* FeedCell.swift in Sources */,
@@ -353,6 +363,7 @@
 				A4654EB225B9B34E0044FA39 /* User.swift in Sources */,
 				A43326A225B6FE850088092D /* ProfileController.swift in Sources */,
 				A4654EB525B9BFE10044FA39 /* ProfileHeaderViewModel.swift in Sources */,
+				A4878D6E25BDFA100076DF41 /* InputTextView.swift in Sources */,
 				A4654EAF25B9B1500044FA39 /* Constants.swift in Sources */,
 				A433268F25B6FC6D0088092D /* MainTabController.swift in Sources */,
 				A49B424F25BAF8CA00A7BA95 /* UserCellViewModel.swift in Sources */,
@@ -360,6 +371,7 @@
 				A43326AC25B728490088092D /* Extensions.swift in Sources */,
 				A474CDE525B9005D004475A5 /* ImageUploader.swift in Sources */,
 				A474CDE825B90070004475A5 /* AuthService.swift in Sources */,
+				A4878D7125BE33650076DF41 /* PostService.swift in Sources */,
 				A4654EAC25B9B1180044FA39 /* UserService.swift in Sources */,
 				A4654EA425B99B340044FA39 /* ProfileCell.swift in Sources */,
 				A433267525B6FB5A0088092D /* SceneDelegate.swift in Sources */,

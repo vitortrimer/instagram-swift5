@@ -85,10 +85,12 @@ class LoginController: UIViewController {
     //MARK: - Actions
     
     @objc func handlelogin() {
+        showLoader(true)
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         
         AuthService.logUserIn(withEmail: email, password: password) { (result, error) in
+            self.showLoader(false)
             if let error = error {
                 print("DEBUG: LOGIN FAILED \(error.localizedDescription)")
                 return

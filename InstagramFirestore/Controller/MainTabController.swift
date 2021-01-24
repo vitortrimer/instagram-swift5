@@ -90,7 +90,24 @@ class MainTabController: UITabBarController {
         return nav
     }
     
+    func didFinishPickingMedia(_ picker: YPImagePicker) {
+        picker.didFinishPicking {  items, _ in
+            picker.dismiss(animated: false) {
+                guard let selectedImage = items.singlePhoto?.image else { return }
+                
+                let controller = UploadPostController()
+                controller.selectedImage = selectedImage
+                controller.delegate = self
+                let nav = UINavigationController(rootViewController: controller)
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: false, completion: nil)
+            }
+        }
+    }
+    
 }
+
+// MARK: - AuthenticationDelegate
 
 extension MainTabController: AuthenticationDelegate {
     func authenticationDidComplete() {
@@ -118,9 +135,20 @@ extension MainTabController: UITabBarControllerDelegate {
             let picker = YPImagePicker(configuration: config)
             picker.modalPresentationStyle = .fullScreen
             present(picker, animated: true, completion: nil)
+            
+            didFinishPickingMedia(picker)
         }
         
         return true
     }
 }
 
+
+// MARK: - UploadPostControllerDelegate
+
+extension MainTabController: UploadPostControllerDelegate {
+    func shouldReturnToMainTab(_ controller: UploadPostController) {
+        selectedIndex = 0
+        controller.dismiss(animated: true, completion: nil)
+    }
+}
