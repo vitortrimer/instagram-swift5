@@ -32,6 +32,7 @@
 		A4671CA225BF00D4002D6184 /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4671CA125BF00D4002D6184 /* CommentController.swift */; };
 		A4671CA525BF021E002D6184 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4671CA425BF021E002D6184 /* CommentCell.swift */; };
 		A4671CA825BF1169002D6184 /* CommentInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4671CA725BF1169002D6184 /* CommentInputAccessoryView.swift */; };
+		A4671CAB25BF4329002D6184 /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4671CAA25BF4328002D6184 /* CommentService.swift */; };
 		A472D86525B84FA200E1DC39 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A472D86425B84FA200E1DC39 /* LoginController.swift */; };
 		A472D86825B84FAC00E1DC39 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A472D86725B84FAC00E1DC39 /* RegistrationController.swift */; };
 		A472D86B25B874DC00E1DC39 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A472D86A25B874DC00E1DC39 /* CustomTextField.swift */; };
@@ -77,6 +78,7 @@
 		A4671CA125BF00D4002D6184 /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
 		A4671CA425BF021E002D6184 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		A4671CA725BF1169002D6184 /* CommentInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccessoryView.swift; sourceTree = "<group>"; };
+		A4671CAA25BF4328002D6184 /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		A472D86425B84FA200E1DC39 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A472D86725B84FAC00E1DC39 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		A472D86A25B874DC00E1DC39 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				A474CDE725B90070004475A5 /* AuthService.swift */,
 				A4654EAB25B9B1180044FA39 /* UserService.swift */,
 				A4878D7025BE33650076DF41 /* PostService.swift */,
+				A4671CAA25BF4328002D6184 /* CommentService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				A472D86525B84FA200E1DC39 /* LoginController.swift in Sources */,
 				A43326A925B727710088092D /* FeedCell.swift in Sources */,
 				A433269825B6FE600088092D /* ImageSelectorController.swift in Sources */,
+				A4671CAB25BF4329002D6184 /* CommentService.swift in Sources */,
 				A433269525B6FE4C0088092D /* SearchController.swift in Sources */,
 				A472D86E25B8978F00E1DC39 /* AuthenticationViewModel.swift in Sources */,
 				A4EB76D925BA480B0042B431 /* UserCell.swift in Sources */,
