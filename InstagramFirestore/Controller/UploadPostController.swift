@@ -12,9 +12,12 @@ protocol UploadPostControllerDelegate: class {
 }
 
 class UploadPostController: UIViewController {
+    
     // MARK: - Properties
     
     weak var delegate: UploadPostControllerDelegate?
+    
+    var currentUser: User?
     
     var selectedImage: UIImage? {
         didSet {
@@ -66,8 +69,9 @@ class UploadPostController: UIViewController {
         showLoader(true)
         guard let image = selectedImage else { return }
         guard let caption = captionTextView.text else { return }
+        guard let user = currentUser else { return }
         
-        PostService.uploadPost(caption: caption, image: image) { error in
+        PostService.uploadPost(caption: caption, image: image, user: user) { error in
             self.showLoader(false)
             if let error = error {
                 print("FAILED TO UPLOAD POST \(error.localizedDescription)")
