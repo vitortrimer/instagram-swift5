@@ -44,6 +44,7 @@ class SearchController: UITableViewController {
     //MARK: - Helpers
     
     func configureTableView() {
+        self.navigationController?.navigationBar.tintColor = UIColor.label
         view.backgroundColor = .systemBackground
         
         tableView.register(UserCell.self, forCellReuseIdentifier: reuseIndentifier)

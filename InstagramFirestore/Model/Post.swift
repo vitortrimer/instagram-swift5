@@ -12,6 +12,7 @@ struct Post {
     
     var caption: String
     var likes: Int
+    var didLike = false
     
     let imageUrl: String
     let timestamp: Timestamp
