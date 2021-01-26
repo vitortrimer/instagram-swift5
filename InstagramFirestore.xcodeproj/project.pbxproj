@@ -33,6 +33,8 @@
 		A4671CA525BF021E002D6184 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4671CA425BF021E002D6184 /* CommentCell.swift */; };
 		A4671CA825BF1169002D6184 /* CommentInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4671CA725BF1169002D6184 /* CommentInputAccessoryView.swift */; };
 		A4671CAB25BF4329002D6184 /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4671CAA25BF4328002D6184 /* CommentService.swift */; };
+		A4671CAE25BF47F4002D6184 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4671CAD25BF47F4002D6184 /* Comment.swift */; };
+		A4671CB125BF4B38002D6184 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4671CB025BF4B38002D6184 /* CommentViewModel.swift */; };
 		A472D86525B84FA200E1DC39 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A472D86425B84FA200E1DC39 /* LoginController.swift */; };
 		A472D86825B84FAC00E1DC39 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A472D86725B84FAC00E1DC39 /* RegistrationController.swift */; };
 		A472D86B25B874DC00E1DC39 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A472D86A25B874DC00E1DC39 /* CustomTextField.swift */; };
@@ -79,6 +81,8 @@
 		A4671CA425BF021E002D6184 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		A4671CA725BF1169002D6184 /* CommentInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccessoryView.swift; sourceTree = "<group>"; };
 		A4671CAA25BF4328002D6184 /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		A4671CAD25BF47F4002D6184 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		A4671CB025BF4B38002D6184 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		A472D86425B84FA200E1DC39 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A472D86725B84FAC00E1DC39 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		A472D86A25B874DC00E1DC39 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 			children = (
 				A4654EB125B9B34E0044FA39 /* User.swift */,
 				A4671C9B25BE615E002D6184 /* Post.swift */,
+				A4671CAD25BF47F4002D6184 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 				A4654EB425B9BFE10044FA39 /* ProfileHeaderViewModel.swift */,
 				A49B424E25BAF8CA00A7BA95 /* UserCellViewModel.swift */,
 				A4671C9E25BE6444002D6184 /* PostViewModel.swift */,
+				A4671CB025BF4B38002D6184 /* CommentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -366,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4671CB125BF4B38002D6184 /* CommentViewModel.swift in Sources */,
 				A4671C9F25BE6444002D6184 /* PostViewModel.swift in Sources */,
 				A472D86B25B874DC00E1DC39 /* CustomTextField.swift in Sources */,
 				A4654EA725B99B3F0044FA39 /* ProfileHeader.swift in Sources */,
@@ -376,6 +383,7 @@
 				A43326A925B727710088092D /* FeedCell.swift in Sources */,
 				A433269825B6FE600088092D /* ImageSelectorController.swift in Sources */,
 				A4671CAB25BF4329002D6184 /* CommentService.swift in Sources */,
+				A4671CAE25BF47F4002D6184 /* Comment.swift in Sources */,
 				A433269525B6FE4C0088092D /* SearchController.swift in Sources */,
 				A472D86E25B8978F00E1DC39 /* AuthenticationViewModel.swift in Sources */,
 				A4EB76D925BA480B0042B431 /* UserCell.swift in Sources */,
