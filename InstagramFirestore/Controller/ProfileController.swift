@@ -51,6 +51,7 @@ class ProfileController: UICollectionViewController {
     func fetchUserStats() {
         UserService.fetchUserStats(uid: user.uid) { stats in
             self.user.stats = stats
+            self.collectionView.refreshControl?.endRefreshing()
             self.collectionView.reloadData()
         }
     }
@@ -148,6 +149,8 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
 // MARK: - ProfileHeaderDelegate
 extension ProfileController: ProfileHeaderDelegate {
     func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User) {
+        guard let tab = tabBarController as? MainTabController else { return }
+        guard let currentUser = tab.user else { return }
         
         if user.isCurrentUser {
             print("Edit profile")
@@ -166,6 +169,8 @@ extension ProfileController: ProfileHeaderDelegate {
                 self.user.isFollowed = true
                 self.user.stats.followers += 1
                 self.collectionView.reloadData()
+                
+                NotificationService.uploadNotification(toUid: user.uid, fromUser: currentUser, type: .follow)
             }
         }
     }

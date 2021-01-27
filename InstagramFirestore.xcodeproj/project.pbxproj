@@ -46,6 +46,9 @@
 		A4878D6E25BDFA100076DF41 /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4878D6D25BDFA100076DF41 /* InputTextView.swift */; };
 		A4878D7125BE33650076DF41 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4878D7025BE33650076DF41 /* PostService.swift */; };
 		A48BAA5725C0976C00D90C0E /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48BAA5625C0976C00D90C0E /* NotificationCell.swift */; };
+		A48BAA5A25C18A4700D90C0E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48BAA5925C18A4700D90C0E /* Notification.swift */; };
+		A48BAA5D25C18DA900D90C0E /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48BAA5C25C18DA900D90C0E /* NotificationService.swift */; };
+		A48BAA6125C1A12400D90C0E /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48BAA6025C1A12400D90C0E /* NotificationViewModel.swift */; };
 		A49B424F25BAF8CA00A7BA95 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49B424E25BAF8CA00A7BA95 /* UserCellViewModel.swift */; };
 		A4EB76D925BA480B0042B431 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB76D825BA480B0042B431 /* UserCell.swift */; };
 		E642A2F797476F9E9386012B /* Pods_InstagramFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA0EE2FF3C8BE04B6642A96 /* Pods_InstagramFirestore.framework */; };
@@ -95,6 +98,9 @@
 		A4878D6D25BDFA100076DF41 /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		A4878D7025BE33650076DF41 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		A48BAA5625C0976C00D90C0E /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		A48BAA5925C18A4700D90C0E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		A48BAA5C25C18DA900D90C0E /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		A48BAA6025C1A12400D90C0E /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		A49B424E25BAF8CA00A7BA95 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		A4EB76D825BA480B0042B431 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		F686390CA9C3556D8BB98118 /* Pods-InstagramFirestore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirestore.release.xcconfig"; path = "Target Support Files/Pods-InstagramFirestore/Pods-InstagramFirestore.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +171,7 @@
 				A4654EB125B9B34E0044FA39 /* User.swift */,
 				A4671C9B25BE615E002D6184 /* Post.swift */,
 				A4671CAD25BF47F4002D6184 /* Comment.swift */,
+				A48BAA5925C18A4700D90C0E /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +198,7 @@
 				A49B424E25BAF8CA00A7BA95 /* UserCellViewModel.swift */,
 				A4671C9E25BE6444002D6184 /* PostViewModel.swift */,
 				A4671CB025BF4B38002D6184 /* CommentViewModel.swift */,
+				A48BAA6025C1A12400D90C0E /* NotificationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 				A4654EAB25B9B1180044FA39 /* UserService.swift */,
 				A4878D7025BE33650076DF41 /* PostService.swift */,
 				A4671CAA25BF4328002D6184 /* CommentService.swift */,
+				A48BAA5C25C18DA900D90C0E /* NotificationService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -376,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4671CB125BF4B38002D6184 /* CommentViewModel.swift in Sources */,
+				A48BAA6125C1A12400D90C0E /* NotificationViewModel.swift in Sources */,
 				A4671C9F25BE6444002D6184 /* PostViewModel.swift in Sources */,
 				A472D86B25B874DC00E1DC39 /* CustomTextField.swift in Sources */,
 				A4654EA725B99B3F0044FA39 /* ProfileHeader.swift in Sources */,
@@ -387,6 +397,7 @@
 				A433269825B6FE600088092D /* ImageSelectorController.swift in Sources */,
 				A4671CAB25BF4329002D6184 /* CommentService.swift in Sources */,
 				A4671CAE25BF47F4002D6184 /* Comment.swift in Sources */,
+				A48BAA5A25C18A4700D90C0E /* Notification.swift in Sources */,
 				A433269525B6FE4C0088092D /* SearchController.swift in Sources */,
 				A472D86E25B8978F00E1DC39 /* AuthenticationViewModel.swift in Sources */,
 				A4EB76D925BA480B0042B431 /* UserCell.swift in Sources */,
@@ -407,6 +418,7 @@
 				A474CDE825B90070004475A5 /* AuthService.swift in Sources */,
 				A4878D7125BE33650076DF41 /* PostService.swift in Sources */,
 				A4654EAC25B9B1180044FA39 /* UserService.swift in Sources */,
+				A48BAA5D25C18DA900D90C0E /* NotificationService.swift in Sources */,
 				A4654EA425B99B340044FA39 /* ProfileCell.swift in Sources */,
 				A433267525B6FB5A0088092D /* SceneDelegate.swift in Sources */,
 				A48BAA5725C0976C00D90C0E /* NotificationCell.swift in Sources */,
