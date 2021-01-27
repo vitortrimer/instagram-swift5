@@ -49,6 +49,7 @@
 		A48BAA5A25C18A4700D90C0E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48BAA5925C18A4700D90C0E /* Notification.swift */; };
 		A48BAA5D25C18DA900D90C0E /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48BAA5C25C18DA900D90C0E /* NotificationService.swift */; };
 		A48BAA6125C1A12400D90C0E /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48BAA6025C1A12400D90C0E /* NotificationViewModel.swift */; };
+		A48BAA6425C1D8E900D90C0E /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48BAA6325C1D8E900D90C0E /* ResetPasswordController.swift */; };
 		A49B424F25BAF8CA00A7BA95 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49B424E25BAF8CA00A7BA95 /* UserCellViewModel.swift */; };
 		A4EB76D925BA480B0042B431 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB76D825BA480B0042B431 /* UserCell.swift */; };
 		E642A2F797476F9E9386012B /* Pods_InstagramFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA0EE2FF3C8BE04B6642A96 /* Pods_InstagramFirestore.framework */; };
@@ -101,6 +102,7 @@
 		A48BAA5925C18A4700D90C0E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		A48BAA5C25C18DA900D90C0E /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		A48BAA6025C1A12400D90C0E /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		A48BAA6325C1D8E900D90C0E /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		A49B424E25BAF8CA00A7BA95 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		A4EB76D825BA480B0042B431 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		F686390CA9C3556D8BB98118 /* Pods-InstagramFirestore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirestore.release.xcconfig"; path = "Target Support Files/Pods-InstagramFirestore/Pods-InstagramFirestore.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			children = (
 				A472D86425B84FA200E1DC39 /* LoginController.swift */,
 				A472D86725B84FAC00E1DC39 /* RegistrationController.swift */,
+				A48BAA6325C1D8E900D90C0E /* ResetPasswordController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				A4671CA825BF1169002D6184 /* CommentInputAccessoryView.swift in Sources */,
 				A4654EB525B9BFE10044FA39 /* ProfileHeaderViewModel.swift in Sources */,
 				A4878D6E25BDFA100076DF41 /* InputTextView.swift in Sources */,
+				A48BAA6425C1D8E900D90C0E /* ResetPasswordController.swift in Sources */,
 				A4654EAF25B9B1500044FA39 /* Constants.swift in Sources */,
 				A433268F25B6FC6D0088092D /* MainTabController.swift in Sources */,
 				A49B424F25BAF8CA00A7BA95 /* UserCellViewModel.swift in Sources */,

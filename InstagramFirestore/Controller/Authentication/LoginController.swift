@@ -61,6 +61,7 @@ class LoginController: UIViewController {
     private let forgotPassword: UIButton = {
         let button = UIButton(type: .system)
         button.attributedTitle(firstPart: "Forgot your password?", secondPart: "Get help signing in.")
+        button.addTarget(self, action: #selector(handleShowResetPassword), for: .touchUpInside)
         return button
     }()
 
@@ -92,7 +93,7 @@ class LoginController: UIViewController {
         AuthService.logUserIn(withEmail: email, password: password) { (result, error) in
             self.showLoader(false)
             if let error = error {
-                print("DEBUG: LOGIN FAILED \(error.localizedDescription)")
+                self.showMessage(withTitle: "Error", message: error.localizedDescription)
                 return
             }
             
@@ -115,6 +116,12 @@ class LoginController: UIViewController {
         }
         
         updateForm()
+    }
+    
+    @objc func handleShowResetPassword() {
+        let controller = ResetPasswordController()
+        controller.delegate = self
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     //MARK: - Helpers
@@ -174,5 +181,11 @@ extension LoginController: UITextFieldDelegate {
         }
         
         return true
+    }
+}
+
+extension LoginController: ResetPasswordControllerDelegate {
+    func controllerDidSendResetPassword(_ controller: ResetPasswordController) {
+        navigationController?.popViewController(animated: true)
     }
 }

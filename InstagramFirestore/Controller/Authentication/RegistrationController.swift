@@ -133,7 +133,7 @@ class RegistrationController: UIViewController {
         AuthService.registerUser(withCredentials: credentials) { error in
             self.showLoader(false)
             if let error = error {
-                print("DEBUG: Failed to register user \(error.localizedDescription)")
+                self.showMessage(withTitle: "Error", message: error.localizedDescription)
                 return
             }
             
