@@ -1,4 +1,4 @@
-## :construction: PROJECT UNDER CONSTRUCTION :construction:
+## Instagram Firestore
 
 The idea about this project is cloning Instagram to iOS apps using Swift 5 following Stephan Dowless course at Udemy to learn more about Swift and iOS development
 
