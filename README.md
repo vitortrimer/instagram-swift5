@@ -11,7 +11,4 @@ The idea about this project is cloning Instagram to iOS apps using Swift 5 follo
 - Show profiles
 - Edit profile
 
-
-While I advance thru the app development this readme will start to have some prints.
-
 That's it :relieved:
